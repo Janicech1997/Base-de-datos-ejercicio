@@ -17,3 +17,16 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 module.exports = db;
+
+db.rol = require("./rol.model.js")(sequelize, Sequelize);
+db.usuario = require("./usuario.model.js")(sequelize, Sequelize);
+
+// establecer las relaciones
+// -------------- tabla usuario
+db.rol.hasMany(db.usuario,{
+  foreingKey: "rolId",
+});
+
+db.usuario.belongsTo(db.rol, {
+  foreingKey: "rolId",
+});
