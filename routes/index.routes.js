@@ -29,7 +29,7 @@ module.exports = app => {
     /*
     * RUTAS PARA EL ROL
     */
-    const rol = require("../controllers/rol.controller.js");
+    const rol = require("../controller/rol.controller.js");
 
     var router = require("express").Router();
     // Crear un nuevo Rol 
@@ -56,7 +56,7 @@ module.exports = app => {
     /**
      * RUTAS PARA EL USUARIO
      */
-     const usuario = require("../controllers/usuario.controller.js");
+     const usuario = require("../controller/usuario.controller.js");
 
      router.post("/usuario/crear", usuario.create); //http://localhost:9595/janice/usuario/crear
     

@@ -1,3 +1,4 @@
+const dbConfig = require("../config/db.config.js");
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
@@ -24,9 +25,9 @@ db.usuario = require("./usuario.model.js")(sequelize, Sequelize);
 // establecer las relaciones
 // -------------- tabla usuario
 db.rol.hasMany(db.usuario,{
-  foreingKey: "rolId",
+  foreingKey: "rol_Id",
 });
 
 db.usuario.belongsTo(db.rol, {
-  foreingKey: "rolId",
+  foreingKey: "rol_Id",
 });
