@@ -1,0 +1,32 @@
+#Panel_galeria{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#Panel_galeria div>img{
+	max-width: 100%;
+	display: block;
+	border-radius: 6px;
+}
+
+#Panel_galeria div{
+	margin: 15px;
+	flex-basis: 200px;
+	padding: 5px;
+}
+#Panel_galeria div>label{
+    display: flex;
+    justify-content: center;
+}
+#imagen{
+	margin: 15px;
+	flex-basis: 200px;
+	padding: 5px;
+    align-items: center;
+}
+.contenido2 img{
+    padding-left: 100px;
+    justify-content: center;
+}
